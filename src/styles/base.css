@@ -1,0 +1,80 @@
+/* 变量集中在此，game.css 只用不定义，改主题时改一处即可。 */
+:root {
+    --bg: #0b0e14;
+    --bg-soft: #141924;
+    --line: rgba(255, 255, 255, 0.09);
+    --text: #eef1f6;
+    --text-dim: #98a1b3;
+    --accent: #6ea8fe;
+    --radius-lg: 18px;
+    --radius-md: 12px;
+    --font-sans: 'Sora', 'Noto Sans SC', system-ui, -apple-system, 'PingFang SC', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    background:
+        radial-gradient(1100px 620px at 50% -10%, rgba(110, 168, 254, 0.14), transparent 70%),
+        var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+}
+
+button {
+    font: inherit;
+    color: inherit;
+}
+
+h1,
+p,
+dl,
+dd {
+    margin: 0;
+}
+
+.app {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 40px 20px 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.app__head {
+    text-align: center;
+}
+
+.app__title {
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 800;
+    letter-spacing: 0.06em;
+}
+
+.app__subtitle {
+    margin-top: 6px;
+    color: var(--text-dim);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+}
+
+@media (max-width: 720px) {
+    .app {
+        padding: 26px 14px 40px;
+        gap: 18px;
+    }
+}

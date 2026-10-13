@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "composite": true,
+        "skipLibCheck": true,
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "types": ["node"],
+        // composite 项目不允许 noEmit（TS6310），但产物只往 node_modules 里丢，
+        // 不污染仓库；非 build 模式下根本不会真的写盘。
+        "emitDeclarationOnly": true,
+        "outDir": "./node_modules/.tmp/tsconfig.node",
+        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo"
+    },
+    "include": ["vite.config.ts"]
+}
